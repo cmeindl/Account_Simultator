@@ -3,13 +3,17 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import  org.springframework.data.web.config.EnableSpringDataWebSupport;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+//import  org.springframework.data.web.config.EnableSpringDataWebSupport;
 
-
+@PropertySources(value = {@PropertySource("classpath:application.properties")})
 @SpringBootApplication
+
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
+        
              ArrayList<Transaction_Rules> TRules = new ArrayList<Transaction_Rules>();
         Transaction_Rules TR = new Transaction_Rules();
         TRules = TR.buildDefault();
