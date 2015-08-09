@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySources;
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
-        
+
              ArrayList<Transaction_Rules> TRules = new ArrayList<Transaction_Rules>();
         Transaction_Rules TR = new Transaction_Rules();
         TRules = TR.buildDefault();
